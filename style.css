@@ -1,10 +1,25 @@
 body{
-    background-color: rgb(129, 201, 230);
+    background-color: rgb(20, 9, 22);
 }
+
 .container  {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: rgb(129, 201, 230);
+    background-color: rgb(100, 91, 136);;
 }
+
+.question-footer{
+    display: flex;
+    justify-content: space-between;
+    border-top: solid 2px rgba(0, 0, 0, 0.158) ;
+    align-items: center;
+    padding-top: 12px;
+    margin-top: 12px;
+}
+
+.quiz-card {
+    width: 30rem;
+}
+
