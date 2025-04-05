@@ -17,33 +17,55 @@
             </div>
         </nav>
 
+
         <div class="container">
-            <div class="card quiz-card" >
+            <div class="card quiz-card">
                 <img
                     src="./assets/img/education-6305113_1280.jpg"
                     class="card-img-top"
                 />
-                <div class="card-body">
+
+                <div class="card-body" id="endScreen" style="display: none;" >Quiz beendet!</div>
+
+                <div class="card-body" id="question-body">
                     <h5 class="card-title" id="question-text">Frage</h5>
 
-                    <div class="card mb-2 quiz-answer" onclick="answer('answer_1')">
+                    <div
+                        class="card mb-2 quiz-answer"
+                        onclick="answer('answer_1')"
+                    >
                         <div class="card-body" id="answer_1">Antwort.</div>
                     </div>
-                    <div class="card mb-2 quiz-answer" onclick="answer('answer_2')">
+                    <div
+                        class="card mb-2 quiz-answer"
+                        onclick="answer('answer_2')"
+                    >
                         <div class="card-body" id="answer_2">Antwort.</div>
                     </div>
-                    <div class="card mb-2 quiz-answer" onclick="answer('answer_3')">
+                    <div
+                        class="card mb-2 quiz-answer"
+                        onclick="answer('answer_3')"
+                    >
                         <div class="card-body" id="answer_3">Antwort.</div>
                     </div>
-                    <div class="card mb-2 quiz-answer" onclick="answer('answer_4')">
+                    <div
+                        class="card mb-2 quiz-answer"
+                        onclick="answer('answer_4')"
+                    >
                         <div class="card-body" id="answer_4">Antwort.</div>
                     </div>
 
                     <div class="question-footer">
-                        <p><b>1</b> von <b id="all-questions"></b> Fragen</p>
-                        <button disabled class="btn btn-warning">Nächste Frage</button>
+                        <p><b id="currentQuestionNumber">1</b> von <b id="all-questions"></b> Fragen</p>
+                        <!--Button currently enabled, because removing disabled not working. Add attribute disabled later to figure out why-->
+                        <button
+                            onclick="nextQuestion()"
+                            class="btn btn-warning"
+                            id="btn-next-q"
+                        >
+                            Nächste Frage
+                        </button>
                     </div>
-                
                 </div>
             </div>
         </div>
