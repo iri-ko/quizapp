@@ -23,3 +23,12 @@ body{
     width: 30rem;
 }
 
+
+.quiz-answer:hover{
+    cursor: pointer;
+    background-color:  rgba(199, 190, 236, 0.315);
+}
+
+.bg-success, .bg-danger{
+    color: white;
+}

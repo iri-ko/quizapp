@@ -92,3 +92,17 @@ function showQuestion(){
     document.getElementById('answer_4').innerHTML = question['answer_4'];
 }
 
+function answer(selection){
+    let question = questions[currentQuestion];
+    let selectedQuestionNumber = selection.slice(-1);
+
+    if(selectedQuestionNumber == question['right_answer']){
+        console.log("RICHTIG!")
+        document.getElementById(selection).parentNode.classList.add('bg-success');
+    }
+    else {
+        console.log("FALSCH!")
+        document.getElementById(selection).parentNode.classList.add('bg-danger');
+    }
+    
+}
