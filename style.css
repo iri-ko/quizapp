@@ -39,8 +39,13 @@ body{
     justify-content: center;
     align-items: center;
     gap: 30px;
+    padding: 20px;
 }
 
 #card-img-win {
     width: 50%;
+}
+
+.progress-bar {
+    color: black;
 }

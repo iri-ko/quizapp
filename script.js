@@ -76,23 +76,31 @@ let rightQuestions = 0;
 
 function init() {
     document.getElementById("all-questions").innerHTML = questions.length;
-    
-    showQuestion();
 
+    showQuestion();
 }
 
 function showQuestion() {
     let question = questions[currentQuestion];
 
     if (currentQuestion >= questions.length) {
-        
         document.getElementById("endScreen").style = "";
         document.getElementById("question-body").style = "display: none;";
-        document.getElementById('finalAnswerNumbers').innerHTML = questions.length;
-        document.getElementById("amount-right-questions").innerHTML = rightQuestions;
-        
+        document.getElementById("finalAnswerNumbers").innerHTML =
+            questions.length;
+        document.getElementById("amount-right-questions").innerHTML =
+            rightQuestions;
+        document
+            .getElementById("header-img")
+            .setAttribute("src", "./assets/img/achievement-1293132_1280.png");
 
     } else {
+        let percent = (currentQuestion + 1) / questions.length ;
+        percent = Math.round(percent * 100);
+
+        document.getElementById('progress-bar').innerHTML = `${percent}%`;
+        document.getElementById('progress-bar').style.width = `${percent}%`;
+
         document.getElementById("question-text").innerHTML =
             question["question"];
 
@@ -101,8 +109,6 @@ function showQuestion() {
         document.getElementById("answer_3").innerHTML = question["answer_3"];
         document.getElementById("answer_4").innerHTML = question["answer_4"];
     }
-
-    
 }
 
 function answer(selection) {
@@ -115,7 +121,7 @@ function answer(selection) {
         document
             .getElementById(selection)
             .parentNode.classList.add("bg-success");
-            rightQuestions++;
+        rightQuestions++;
     } else {
         document
             .getElementById(selection)
@@ -165,4 +171,19 @@ function resetAnswerButtons() {
     document
         .getElementById("answer_4")
         .parentNode.classList.remove("bg-success");
+}
+
+function restartGame(){
+    document
+            .getElementById("header-img")
+            .setAttribute("src", "./assets/img/education-6305113_1280.jpg");
+
+            currentQuestion = 0;
+
+            rightQuestions = 0;
+
+            init();
+
+            document.getElementById("endScreen").style = "display: none;";
+            document.getElementById("question-body").style = "";
 }

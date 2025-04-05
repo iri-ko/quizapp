@@ -22,19 +22,34 @@
                 <img
                     src="./assets/img/education-6305113_1280.jpg"
                     class="card-img-top"
+                    id="header-img"
                 />
+                <div class="progress">
+                    <div
+                        class="progress-bar bg-warning"
+                        role="progressbar"
+                        style="width: 0%"
+                        id="progress-bar"
+                    >
+                        25%
+                    </div>
+                </div>
 
                 <div class="card-body" id="endScreen" style="display: none">
                     <h3>Quiz beendet!</h3>
 
-                    <img
-                        id="card-img-win"
-                        class="card-img-win"
-                        src="./assets/img/achievement-1293132_1280.png"
-                    />
+                    <div>
+                        Du hast <b id="amount-right-questions">xxx</b> von
+                        <b id="finalAnswerNumbers">xxx</b> Fragen beantwortet!
+                    </div>
 
-                    <div>Du hast <b id="amount-right-questions">xxx</b> von
-                    <b id="finalAnswerNumbers">xxx</b> Fragen beantwortet!</div>
+                    <button
+                    onclick="restartGame()"
+                    class="btn btn-warning"
+                    id="btn-next-q"
+                >
+                    Erneut spielen
+                </button>
                 </div>
 
                 <div class="card-body" id="question-body">
