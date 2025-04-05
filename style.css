@@ -32,3 +32,15 @@ body{
 .bg-success, .bg-danger{
     color: white;
 }
+
+#endScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#card-img-win {
+    width: 50%;
+}

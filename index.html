@@ -17,7 +17,6 @@
             </div>
         </nav>
 
-
         <div class="container">
             <div class="card quiz-card">
                 <img
@@ -25,7 +24,18 @@
                     class="card-img-top"
                 />
 
-                <div class="card-body" id="endScreen" style="display: none;" >Quiz beendet!</div>
+                <div class="card-body" id="endScreen" style="display: none">
+                    <h3>Quiz beendet!</h3>
+
+                    <img
+                        id="card-img-win"
+                        class="card-img-win"
+                        src="./assets/img/achievement-1293132_1280.png"
+                    />
+
+                    <div>Du hast <b id="amount-right-questions">xxx</b> von
+                    <b id="finalAnswerNumbers">xxx</b> Fragen beantwortet!</div>
+                </div>
 
                 <div class="card-body" id="question-body">
                     <h5 class="card-title" id="question-text">Frage</h5>
@@ -56,7 +66,10 @@
                     </div>
 
                     <div class="question-footer">
-                        <p><b id="currentQuestionNumber">1</b> von <b id="all-questions"></b> Fragen</p>
+                        <p>
+                            <b id="currentQuestionNumber">1</b> von
+                            <b id="all-questions"></b> Fragen
+                        </p>
                         <!--Button currently enabled, because removing disabled not working. Add attribute disabled later to figure out why-->
                         <button
                             onclick="nextQuestion()"
